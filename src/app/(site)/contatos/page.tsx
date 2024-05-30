@@ -1,11 +1,8 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Header } from "@/components/header/index";
-import { Footer } from "@/components/footer/index";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Estudo nextJS",
-  description: "Estaudando nextJS",
+  title: "Contato - Estudo nextJS",
+  description: "Entre em contato",
   keywords: ["HTML", "CSS", "JAVASCRIPT", "PROGRAMACAO"], //tags chaves para rankear no google o site
   openGraph: {
     // imagem que vai ser gerada quando vc colar o site em algum ponto, tipo linkedin
@@ -25,18 +22,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default async function contatos() {
+
   return (
-    <html lang="en">
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <div>
+      <h1>Página de Contato</h1>
+      <span>031998571830</span>
+    </div>
   );
 }

@@ -1,11 +1,7 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Header } from "@/components/header/index";
-import { Footer } from "@/components/footer/index";
-
+import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Estudo nextJS",
-  description: "Estaudando nextJS",
+  title: "Painel do site",
+  description: "Esse é o painel demonstativo do site",
   keywords: ["HTML", "CSS", "JAVASCRIPT", "PROGRAMACAO"], //tags chaves para rankear no google o site
   openGraph: {
     // imagem que vai ser gerada quando vc colar o site em algum ponto, tipo linkedin
@@ -25,18 +21,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default function DashboardLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <div>
+      <h3>Header do Dashboard</h3>
+      <br></br>
+      {children}
+    </div>
   );
 }

@@ -1,11 +1,7 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Header } from "@/components/header/index";
-import { Footer } from "@/components/footer/index";
-
+import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Estudo nextJS",
-  description: "Estaudando nextJS",
+  title: "Cadastro",
+  description: "Esse é o painel cadastrando usuario",
   keywords: ["HTML", "CSS", "JAVASCRIPT", "PROGRAMACAO"], //tags chaves para rankear no google o site
   openGraph: {
     // imagem que vai ser gerada quando vc colar o site em algum ponto, tipo linkedin
@@ -25,18 +21,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Cadastro() {
   return (
-    <html lang="en">
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <div>
+      <h1>Página de Cadastro</h1>
+      <h3>Essa é a página de cadastro de clientes</h3>
+    </div>
   );
 }
